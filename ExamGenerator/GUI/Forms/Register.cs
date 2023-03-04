@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace ExamGenerator.GUI.Forms
 {
-    public partial class Frm_Login : Form
+    public partial class Frm_Register : Form
     {
-        LoginGUI login;
-        public Frm_Login()
+        public Frm_Register()
         {
             InitializeComponent();
-            login = new LoginGUI(Txt_User, Txt_Password, Btn_LogIn, Btn_Register, LinkLbl_ForgotPassword);
         }
     }
 }

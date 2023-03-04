@@ -1,6 +1,6 @@
 ﻿namespace ExamGenerator.GUI.Forms
 {
-    partial class Login
+    partial class Frm_Login
     {
         /// <summary>
         /// Required designer variable.
@@ -101,7 +101,7 @@
             Btn_LogIn.Text = "Log In";
             Btn_LogIn.UseVisualStyleBackColor = true;
             // 
-            // Login
+            // Frm_Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -114,7 +114,7 @@
             Controls.Add(Lbl_User);
             Controls.Add(Txt_Password);
             Controls.Add(Txt_User);
-            Name = "Login";
+            Name = "Frm_Login";
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();

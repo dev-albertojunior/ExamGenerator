@@ -23,6 +23,9 @@ namespace ExamGenerator.GUI
             ForgotPassword = forgotPassword;
         }
 
-
+        public void ExecuteLogin()
+        {
+            
+        }
     }
 }
