@@ -179,6 +179,7 @@
             Controls.Add(Txt_Name);
             Name = "Frm_Register";
             Text = "Register";
+            Load += Frm_Register_Load;
             ResumeLayout(false);
             PerformLayout();
         }

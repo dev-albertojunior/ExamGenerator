@@ -16,5 +16,10 @@ namespace ExamGenerator.GUI.Forms
         {
             InitializeComponent();
         }
+
+        private void Frm_Register_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

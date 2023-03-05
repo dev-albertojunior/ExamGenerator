@@ -91,6 +91,7 @@
             Btn_Register.TabIndex = 5;
             Btn_Register.Text = "Register";
             Btn_Register.UseVisualStyleBackColor = true;
+            Btn_Register.Click += Btn_Register_Click;
             // 
             // Btn_LogIn
             // 

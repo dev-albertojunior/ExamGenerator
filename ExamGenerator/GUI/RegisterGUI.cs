@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace ExamGenerator.GUI
 {
@@ -29,6 +30,7 @@ namespace ExamGenerator.GUI
 
         public void ExecuteRegister()
         {
+            SqlConnection connection = new SqlConnection("Data Source=nome_do_servidor;Initial Catalog=nome_do_banco_de_dados;User ID=nome_de_usuario;Password=senha_do_usuario;");
 
         }
     }
