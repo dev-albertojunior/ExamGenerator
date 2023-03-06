@@ -23,3 +23,4 @@ C:\Users\engal\OneDrive\Documentos\Projetos Visual Studio\ExamGenerator\ExamGene
 C:\Users\engal\OneDrive\Documentos\Projetos Visual Studio\ExamGenerator\ExamGenerator\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\engal\OneDrive\Documentos\Projetos Visual Studio\ExamGenerator\ExamGenerator\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\engal\OneDrive\Documentos\Projetos Visual Studio\ExamGenerator\ExamGenerator\obj\Debug\net6.0-windows\ExamGenerator.csproj.CopyComplete
+C:\Users\engal\OneDrive\Documentos\Projetos Visual Studio\ExamGenerator\ExamGenerator\obj\Debug\net6.0-windows\ExamGenerator.GUI.Forms.Frm_Main.resources

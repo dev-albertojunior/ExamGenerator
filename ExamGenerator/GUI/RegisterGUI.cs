@@ -70,22 +70,32 @@ namespace ExamGenerator.GUI
         {
             if (!CheckIfRegisterExists())
             {
-                SqlConnection connection = new SqlConnection ("Data Source=LAPTOP-K1PKSKJN\\SQLEXPRESS;Initial Catalog=exam;User ID=adminexam;Password=Vancouver.91");
-                string query = "INSERT INTO Users (Name, Email, Birthday, [User], Password) VALUES (@Name, @Email, @Birthday, @User, @Password)";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@Name", Name.Text);
-                cmd.Parameters.AddWithValue("@Email", Email.Text);
-                cmd.Parameters.AddWithValue("@Birthday", Birthday.Value);
-                cmd.Parameters.AddWithValue("@User", User.Text);
-                cmd.Parameters.AddWithValue("@Password", Password.Text);
-                connection.Open();
-                cmd.ExecuteNonQuery();
-                connection.Close();
-                Name.Clear();
-                Email.Clear();
-                User.Clear();
-                Password.Clear();
-                ConfirmPassword.Clear();
+                SqlConnection connection = new SqlConnection("Data Source=LAPTOP-K1PKSKJN\\SQLEXPRESS;Initial Catalog=exam;User ID=adminexam;Password=Vancouver.91");
+                try
+                { 
+                    string query = "INSERT INTO Users (Name, Email, Birthday, [User], Password) VALUES (@Name, @Email, @Birthday, @User, @Password)";
+                    SqlCommand cmd = new SqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@Name", Name.Text);
+                    cmd.Parameters.AddWithValue("@Email", Email.Text);
+                    cmd.Parameters.AddWithValue("@Birthday", Birthday.Value);
+                    cmd.Parameters.AddWithValue("@User", User.Text);
+                    cmd.Parameters.AddWithValue("@Password", Password.Text);
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    Name.Clear();
+                    Email.Clear();
+                    User.Clear();
+                    Password.Clear();
+                    ConfirmPassword.Clear();
+                }
+                catch (Exception ex)
+                {
+                   MessageBox.Show("Error while saving informations on database." + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
             }
         }
 
@@ -93,7 +103,7 @@ namespace ExamGenerator.GUI
         {
             return Password.Text == ConfirmPassword.Text ? true : MessageBox.Show("Passwords do not match!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error) == DialogResult.OK ? false : false;
         }
-        public void CheckAllFields(Form form)
+        public bool CheckAllFields(Form form)
         {
             bool allFieldsFilled = form.Controls.OfType<TextBox>().All(tb => !string.IsNullOrEmpty(tb.Text));
 
@@ -101,6 +111,7 @@ namespace ExamGenerator.GUI
             {
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return allFieldsFilled;
         }
     }
 }

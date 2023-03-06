@@ -26,9 +26,10 @@ namespace ExamGenerator.GUI.Forms
 
         private void Btn_Register_Click(object sender, EventArgs e)
         {
-            register.CheckAllFields(this);
-            register.CheckPassword();
-            register.ExecuteRegister();
+            if (register.CheckAllFields(this) && register.CheckPassword())
+            {
+                register.ExecuteRegister();
+            }
         }
     }
 }

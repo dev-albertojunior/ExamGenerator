@@ -129,8 +129,10 @@
             // 
             Txt_Password.Location = new Point(254, 172);
             Txt_Password.Name = "Txt_Password";
+            Txt_Password.PasswordChar = '*';
             Txt_Password.Size = new Size(137, 23);
             Txt_Password.TabIndex = 11;
+            Txt_Password.UseSystemPasswordChar = true;
             // 
             // Lbl_ConfirmPassword
             // 
@@ -146,8 +148,10 @@
             // 
             Txt_ConfirmPassword.Location = new Point(254, 232);
             Txt_ConfirmPassword.Name = "Txt_ConfirmPassword";
+            Txt_ConfirmPassword.PasswordChar = '*';
             Txt_ConfirmPassword.Size = new Size(137, 23);
             Txt_ConfirmPassword.TabIndex = 13;
+            Txt_ConfirmPassword.UseSystemPasswordChar = true;
             // 
             // Btn_Register
             // 

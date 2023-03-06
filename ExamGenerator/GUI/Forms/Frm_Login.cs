@@ -26,5 +26,10 @@ namespace ExamGenerator.GUI.Forms
             register.Show();
             Hide();
         }
+
+        private void Btn_LogIn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Teste");
+        }
     }
 }
